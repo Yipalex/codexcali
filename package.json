@@ -1,0 +1,36 @@
+{
+  "name": "codexcali",
+  "version": "0.1.0",
+  "description": "Codex + Excalidraw local AI image annotation canvas plugin.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:server": "tsx src/server/start.ts",
+    "build": "tsc -p tsconfig.node.json && vite build",
+    "start": "node dist/node/server/start.js",
+    "mcp": "node dist/node/mcp/server.js",
+    "test": "vitest run --config vitest.config.ts",
+    "typecheck": "tsc -p tsconfig.node.json --noEmit && tsc -p tsconfig.app.json --noEmit",
+    "validate": "npm run typecheck && npm run test"
+  },
+  "dependencies": {
+    "@excalidraw/excalidraw": "^0.18.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "express": "^4.21.2",
+    "nanoid": "^5.0.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vite": "^6.0.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "codexcali",
+  "version": "0.1.0",
+  "description": "A local Codex + Excalidraw AI image annotation canvas.",
+  "author": {
+    "name": "Codexcali contributors"
+  },
+  "homepage": "https://github.com/your-name/codexcali",
+  "repository": "https://github.com/your-name/codexcali",
+  "license": "MIT",
+  "keywords": ["codex", "excalidraw", "canvas", "ai-image", "annotation"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Codexcali",
+    "shortDescription": "Codex + Excalidraw local AI image canvas.",
+    "longDescription": "Open a local Excalidraw infinite canvas from Codex, persist pages and assets in the current project, create AI image holders, and insert generated or revised images through MCP tools.",
+    "developerName": "Codexcali contributors",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write"],
+    "defaultPrompt": [
+      "Open the Codexcali canvas for this project.",
+      "Generate an image into the selected Codexcali holder.",
+      "Use this Codexcali annotation screenshot to create a clean revision."
+    ],
+    "brandColor": "#2F6F73"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "codexcali": {
+      "command": "node",
+      "args": ["dist/node/mcp/server.js"],
+      "env": {
+        "CODEXCALI_PORT": "43218"
+      }
+    }
+  }
+}
