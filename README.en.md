@@ -30,17 +30,24 @@ Environment variables:
 
 ## Installation
 
-### Option 1: Ask Codex To Install It
+### Option 1: Use The Installer
 
-Send Codex a request like this:
+Windows PowerShell:
 
-```text
-Install the Codexcali plugin from https://github.com/Yipalex/codexcali.git.
-Use ~/plugins/codexcali as the local plugin path. After cloning, run npm install
-and npm run build, register it in the personal marketplace, then install codexcali@personal.
+```powershell
+iwr https://raw.githubusercontent.com/Yipalex/codexcali/master/scripts/install-codexcali.ps1 -OutFile $env:TEMP\install-codexcali.ps1
+powershell -ExecutionPolicy Bypass -File $env:TEMP\install-codexcali.ps1
 ```
 
-### Option 2: Manual Install
+macOS / Linux:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Yipalex/codexcali/master/scripts/install-codexcali.sh | bash
+```
+
+The installer clones the repository, runs `npm install` and `npm run build`, registers the personal marketplace, and runs `codex plugin add codexcali@personal` when the Codex CLI is available.
+
+### Option 2: Manual Install And Registration
 
 ```bash
 mkdir -p ~/plugins
@@ -73,7 +80,14 @@ Install the plugin:
 codex plugin add codexcali@personal
 ```
 
-Open a new Codex thread after installation so the new skill and MCP tools are loaded.
+If your terminal cannot find `codex`, install the Codex CLI first:
+
+```bash
+npm install -g @openai/codex@latest
+codex --version
+```
+
+On Windows, if `codex` still resolves to the Microsoft Store / WindowsApps alias, make sure `%APPDATA%\npm` appears before WindowsApps in PATH. Open a new Codex thread after installation so the new skill and MCP tools are loaded.
 
 ## Usage Examples
 

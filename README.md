@@ -32,17 +32,24 @@ codexcali/
 
 ## 安装方式
 
-### 方式一：让 Codex 安装
+### 方式一：使用安装脚本
 
-在 Codex 中发出类似下面的请求：
+Windows PowerShell：
 
-```text
-请安装 GitHub 仓库 https://github.com/Yipalex/codexcali.git 中的 Codexcali 插件。
-安装目标为 ~/plugins/codexcali。安装后请执行 npm install 和 npm run build，
-并把它注册到 personal marketplace，最后安装 codexcali@personal。
+```powershell
+iwr https://raw.githubusercontent.com/Yipalex/codexcali/master/scripts/install-codexcali.ps1 -OutFile $env:TEMP\install-codexcali.ps1
+powershell -ExecutionPolicy Bypass -File $env:TEMP\install-codexcali.ps1
 ```
 
-### 方式二：手动安装
+macOS / Linux：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Yipalex/codexcali/master/scripts/install-codexcali.sh | bash
+```
+
+安装脚本会 clone 仓库、执行 `npm install` 和 `npm run build`、注册 personal marketplace，并在 Codex CLI 可用时执行 `codex plugin add codexcali@personal`。
+
+### 方式二：手动安装和注册
 
 ```bash
 mkdir -p ~/plugins
@@ -75,7 +82,14 @@ npm run build
 codex plugin add codexcali@personal
 ```
 
-安装完成后开启新的 Codex 对话，以便加载新的 skill 和 MCP 工具。
+如果终端提示找不到 `codex`，需要先安装 Codex CLI。通过 npm 安装：
+
+```bash
+npm install -g @openai/codex@latest
+codex --version
+```
+
+Windows 用户如果安装后仍命中 Microsoft Store / WindowsApps 里的 `codex` 别名，请确认 `%APPDATA%\npm` 在 PATH 中排在 WindowsApps 之前。安装完成后开启新的 Codex 对话，以便加载新的 skill 和 MCP 工具。
 
 ## 使用示例
 
