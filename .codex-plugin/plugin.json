@@ -5,8 +5,8 @@
   "author": {
     "name": "Codexcali contributors"
   },
-  "homepage": "https://github.com/your-name/codexcali",
-  "repository": "https://github.com/your-name/codexcali",
+  "homepage": "https://github.com/Yipalex/codexcali",
+  "repository": "https://github.com/Yipalex/codexcali",
   "license": "MIT",
   "keywords": ["codex", "excalidraw", "canvas", "ai-image", "annotation"],
   "skills": "./skills/",

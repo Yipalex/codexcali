@@ -35,18 +35,16 @@ Environment variables:
 Send Codex a request like this:
 
 ```text
-Install the Codexcali plugin from https://github.com/your-name/codexcali.git.
+Install the Codexcali plugin from https://github.com/Yipalex/codexcali.git.
 Use ~/plugins/codexcali as the local plugin path. After cloning, run npm install
 and npm run build, register it in the personal marketplace, then install codexcali@personal.
 ```
-
-Replace `your-name` with the actual GitHub user or organization.
 
 ### Option 2: Manual Install
 
 ```bash
 mkdir -p ~/plugins
-git clone https://github.com/your-name/codexcali.git ~/plugins/codexcali
+git clone https://github.com/Yipalex/codexcali.git ~/plugins/codexcali
 cd ~/plugins/codexcali
 npm install
 npm run build

@@ -37,18 +37,16 @@ codexcali/
 在 Codex 中发出类似下面的请求：
 
 ```text
-请安装 GitHub 仓库 https://github.com/your-name/codexcali.git 中的 Codexcali 插件。
+请安装 GitHub 仓库 https://github.com/Yipalex/codexcali.git 中的 Codexcali 插件。
 安装目标为 ~/plugins/codexcali。安装后请执行 npm install 和 npm run build，
 并把它注册到 personal marketplace，最后安装 codexcali@personal。
 ```
-
-把 `your-name` 换成实际的 GitHub 用户名或组织名。
 
 ### 方式二：手动安装
 
 ```bash
 mkdir -p ~/plugins
-git clone https://github.com/your-name/codexcali.git ~/plugins/codexcali
+git clone https://github.com/Yipalex/codexcali.git ~/plugins/codexcali
 cd ~/plugins/codexcali
 npm install
 npm run build
